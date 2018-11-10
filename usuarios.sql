@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: db
--- Generation Time: Nov 09, 2018 at 09:47 PM
+-- Generation Time: Nov 10, 2018 at 12:21 PM
 -- Server version: 5.7.23
 -- PHP Version: 7.2.8
 
@@ -31,15 +31,18 @@ SET time_zone = "+00:00";
 CREATE TABLE `usuarios` (
   `ID` int(11) NOT NULL,
   `email` varchar(100) COLLATE utf8_bin NOT NULL,
-  `senha` varchar(50) COLLATE utf8_bin NOT NULL
+  `senha` varchar(50) COLLATE utf8_bin NOT NULL,
+  `status` tinyint(4) NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 --
 -- Dumping data for table `usuarios`
 --
 
-INSERT INTO `usuarios` (`ID`, `email`, `senha`) VALUES
-(1, 'leo@uol.com', '123');
+INSERT INTO `usuarios` (`ID`, `email`, `senha`, `status`) VALUES
+(1, 'leo@uol.com', '123', 1),
+(2, 'joao@uol.com', '333', 0),
+(3, 'maria@hotmail.com', '999999', 1);
 
 --
 -- Indexes for dumped tables
@@ -59,7 +62,7 @@ ALTER TABLE `usuarios`
 -- AUTO_INCREMENT for table `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

@@ -1,5 +1,8 @@
 <?php
 
+    session_start();
+    
+
 $servidor = "cursophpleo_db_1";
 $usuario = "root";
 $senha = "phprs";
@@ -23,4 +26,4 @@ $conn->close();
 ?>
 
 <br><br>
-<a href="tabela2.php">Voltar</a>
+<a href="Index.php">Voltar</a>

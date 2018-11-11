@@ -54,5 +54,8 @@ if($idUsuario > 0){
             <input type="hidden" name="id" value="<?=$id?>"/>
 
         </form>
+
+        <br>
+        <a href="tabela4.php">Voltar</a>
     </body>
 </html>
